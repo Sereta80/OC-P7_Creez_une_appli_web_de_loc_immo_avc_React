@@ -1,5 +1,13 @@
+import Banner from '../components/Banner'
+import Gallery from '../components/Gallery'
+
 const Home = () => {
-    return <h1>Accueil</h1>
+    return (
+        <>
+            <Banner />
+            <Gallery />
+        </>
+    )
 }
 
 export default Home
