@@ -1,0 +1,37 @@
+.collapse-closed,
+.collapse-opened {
+    width: 1023px;
+    margin-bottom: 30px;
+    transition: all 500ms;
+}
+
+.collapse-header {
+    background-color: var(--main-bg-color);
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        font-size: 24px;
+    }
+
+    img {
+        transition: transform 500ms;
+        cursor: pointer;
+    }
+
+    .arrow-down {
+        transform: rotate(-180deg);
+    }
+}
+
+.collapse-content {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: var(--secondary-bg-color);
+    // transform: translateY(-10px);
+}
