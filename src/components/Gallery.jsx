@@ -3,13 +3,12 @@ import Card from './Card';
 import '../styles/Gallery.scss'
 
 const Gallery = () => {
-    console.log(logements);
-
     return (
         <div className='gallery'>
             {logements.map((logement) => (
                 <Card
                     key={logement.id}
+                    id={logement.id}
                     title={logement.title}
                     cover={logement.cover}
                 />

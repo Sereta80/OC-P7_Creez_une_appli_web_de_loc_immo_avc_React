@@ -1,5 +1,12 @@
+import Banner from '../components/Banner'
+import bannerImage from '../assets/image-about.png'
+
 const About = () => {
-    return <h1>À propos</h1>
+    return (
+        <>
+            <Banner image={bannerImage} alt="Paysage de montagne" />
+        </>
+    )
 }
 
 export default About
