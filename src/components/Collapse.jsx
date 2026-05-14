@@ -3,37 +3,8 @@ import arrow from '../assets/arrow.png'
 import '../styles/Collapse.scss'
 
 
-const Collapse = ({title, description}) => {
+const Collapse = ({title, description, equipments}) => {
     const [isOpen, setIsOpen] = useState(false)
-
-    // return isOpen ? (
-    //     <div className="collapse-opened">
-    //         <div className="collapse-header">
-    //             <h2>{title}</h2>
-    //             <img
-    //                 src={arrow}
-    //                 alt="Flèche pointant vers le bas"
-    //                 className="arrow-down"
-    //                 onClick={() => setIsOpen(false)}
-    //             />
-    //         </div>
-    //         <div className="collapse-content">
-    //             <p>{description}</p>
-    //         </div>
-    //     </div>
-    // ) : (
-    //     <div className="collapse-closed">
-    //         <div className="collapse-header">
-    //             <h2>{title}</h2>
-    //             <img
-    //                 src={arrow}
-    //                 alt="Flèche pointant vers le haut"
-    //                 className="arrow-up"
-    //                 onClick={() => setIsOpen(true)}
-    //             />
-    //         </div>
-    //     </div>
-    // )
 
     return (
         <div className={`collapse-${isOpen ? 'opened' : 'closed'}`}>
@@ -47,7 +18,12 @@ const Collapse = ({title, description}) => {
             </div>
             {isOpen && (
                 <div className="collapse-content">
-                    <p>{description}</p>
+                    {description && <p>{description}</p>}
+                    <ul>
+                        {equipments && equipments.map((equipment) => (
+                            <li key={equipment}>{equipment}</li>
+                        ))}
+                    </ul>
                 </div>
             )}
         </div>

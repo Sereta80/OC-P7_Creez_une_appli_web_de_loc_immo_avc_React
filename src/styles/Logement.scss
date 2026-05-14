@@ -1,0 +1,19 @@
+.logement {
+    &-header {
+        img {
+            height: 415px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.left-column {
+    h1 {
+        font-size: 36px;
+        font-weight: 500;
+        color: var(--main-bg-color);
+    }
+}
