@@ -32,5 +32,26 @@
     padding: 15px 20px;
     border-radius: 5px;
     background-color: var(--secondary-bg-color);
+    display: flex;
+    align-items: center;
     // transform: translateY(-10px);
+
+    .equipments-list {
+        font-size: 18px;
+    }
+}
+
+.collapses-container {
+    display: flex;
+    gap: 40px;
+}
+
+.description,
+.equipments {
+    width: 50%;
+
+    .collapse-closed,
+    .collapse-opened {
+        width: 100%;
+    }
 }
