@@ -1,20 +1,20 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import logements from '../datas/logements.json'
 import Collapse from '../components/Collapse'
-import Error from './Error'
+import Slideshow from '../components/Slideshow'
 import '../styles/Logement.scss'
 import fullStar from '../assets/star-full.png'
 import emptyStar from '../assets/star-empty.png'
 
-const Logement = ({pictures}) => {
+const Logement = () => {
     const { id } = useParams()
     const logement = logements.find(item => item.id === id)
     const range = [1, 2, 3, 4, 5]
+    const navigate = useNavigate()
 
     if(!logement) {
-        return (
-            <Error />
-        )
+        navigate('/error')
+        return null
     }
 
     const ratingValue = logement.rating
@@ -22,7 +22,7 @@ const Logement = ({pictures}) => {
     return (
         <div className='logement-page'>
             <div className='logement-header'>
-                <Slideshow pictures={logements.pictures} />
+                <Slideshow pictures={logement.pictures} />
             </div>
             <div className='logement-main'>
                 <div className='left-column'>

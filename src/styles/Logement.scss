@@ -3,17 +3,8 @@
         width: 100%;
     }
 
-    &-header {
-        img {
-            height: 415px;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 25px;
-            margin-bottom: 30px;
-        }
-    }
-
     &-main {
+        margin-top: 30px;
         margin-bottom: 20px;
         display: flex;
         justify-content: space-between;

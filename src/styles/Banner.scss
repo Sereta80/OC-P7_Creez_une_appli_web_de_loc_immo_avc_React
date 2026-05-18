@@ -15,7 +15,7 @@
     }
 
     h2 {
-        font-size: 43px;
+        font-size: clamp(1.5rem, 1.1962rem + 1.519vw, 3rem);
         position: absolute;
         top: 85px;
         left: 50%;

@@ -1,0 +1,44 @@
+.slideshow {
+    position: relative;
+    overflow: hidden;
+
+    &-wrapper {
+        position: relative;
+    }
+
+    &-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &-image {
+        height: 415px;
+        min-width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    .back-arrow,
+    .next-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .back-arrow {
+        left: 25px;
+    }
+
+    .next-arrow {
+        right: 25px;
+    }
+
+    &-index {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        color: white;
+    }
+}

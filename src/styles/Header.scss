@@ -4,6 +4,10 @@ nav {
     align-items: center;
     padding: 50px;
 
+    .header-logo {
+        width: clamp(9.063rem, 8.25rem + 4.06vw, 13.125rem);
+    }
+
     ul {
         flex-direction: row;
         display: flex;
