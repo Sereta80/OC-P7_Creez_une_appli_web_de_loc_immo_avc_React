@@ -5,17 +5,28 @@
     background-color: var(--secondary-bg-color);
     padding: 60px;
     border-radius: 20px;
-    margin: 0 20px 50px 20px;
+    margin-bottom: 50px;
 
 
     @media (max-width: 1295px) {
         grid-template-columns: repeat(2, 1fr);
-        padding: 20px;
-        background-color: transparent;
+        padding: 30px;
+        // background-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+        gap: 30px;
+        margin-bottom: 30px;
     }
 
     @media (max-width: 465px) {
         grid-template-columns: 1fr;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    @media (max-width: 375px) {
+        gap: 20px;
     }
 
     h2 {
