@@ -16,8 +16,8 @@ const Collapse = ({title, description, equipments}) => {
                     className={`arrow-${isOpen ? 'down' : 'up'}`}
                 />
             </div>
-            {isOpen && (
-                <div className="collapse-content">
+            <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
+                <div>
                     {description && <p>{description}</p>}
                     <ul className="equipments-list">
                         {equipments && equipments.map((equipment) => (
@@ -25,7 +25,7 @@ const Collapse = ({title, description, equipments}) => {
                         ))}
                     </ul>
                 </div>
-            )}
+            </div>
         </div>
     )
 }

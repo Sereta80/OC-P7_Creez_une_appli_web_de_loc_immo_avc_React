@@ -9,13 +9,19 @@
     &-container {
         display: flex;
         transition: transform 0.5s ease-in-out;
+        // gap: 10px;
     }
 
     &-image {
-        height: 415px;
+        max-height: 415px;
         min-width: 100%;
         object-fit: cover;
         border-radius: 25px;
+        box-sizing: border-box;
+
+        @media (max-width: 768px) {
+            max-height: 255px;
+        }
     }
 
     .back-arrow,
@@ -24,6 +30,14 @@
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            max-height: 40px;
+        }
+
+        @media (max-width: 425px) {
+            max-height: 20px;
+        }
     }
 
     .back-arrow {
