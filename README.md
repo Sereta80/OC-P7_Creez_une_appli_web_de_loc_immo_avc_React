@@ -28,7 +28,7 @@ Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé sur votre machine.
 ### Étape 1 : Cloner le dépôt
 ```bash
 git clone https://github.com/Sereta80/Projet7-Creez_une_appli_web_de_loc_immo_avc_React.git
-cd kasa
+cd Projet7-Creez_une_appli_web_de_loc_immo_avc_React
 ```
 
 ### Étape 2 : Installer les dépendances
