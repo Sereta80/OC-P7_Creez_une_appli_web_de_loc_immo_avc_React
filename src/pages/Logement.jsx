@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import logements from '../datas/logements.json'
 import Collapse from '../components/Collapse'
 import Slideshow from '../components/Slideshow'
@@ -10,11 +10,9 @@ const Logement = () => {
     const { id } = useParams()
     const logement = logements.find(item => item.id === id)
     const range = [1, 2, 3, 4, 5]
-    const navigate = useNavigate()
 
     if(!logement) {
-        navigate('/error')
-        return null
+        return <Navigate to="/error" />
     }
 
     const ratingValue = logement.rating
